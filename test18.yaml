@@ -1,12 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: UItest
+  name: UItest18
   description: Artist Lookup
   annotations:
     harness.io/cicd-accountId: vpCkHKsDSxK9_KYfjCTMKA
     harness.io/cicd-orgId: default
     harness.io/cicd-projectId: PREQA_NG_Pipelines
+    harness.io/ci-pipelineIds: Dochub_pr_env,Seleniumgridsetup,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12
   tags:
     - java
     - data

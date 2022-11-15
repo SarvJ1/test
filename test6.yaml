@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: UItest
+  name: UItest6
   description: Artist Lookup
   annotations:
     harness.io/cicd-accountId: vpCkHKsDSxK9_KYfjCTMKA
-    harness.io/cicd-orgId: default
+    harness.io/cicd-orgId: defaultwrong
     harness.io/cicd-projectId: PREQA_NG_Pipelines
   tags:
     - java
