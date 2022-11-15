@@ -7,8 +7,7 @@ metadata:
     harness.io/cicd-accountId: vpCkHKsDSxK9_KYfjCTMKA
     harness.io/cicd-orgId: default
     harness.io/cicd-projectId: PREQA_NG_Pipelines
-    harness.io/ci-pipelineIdentifiers: Dochub_pr_env,Seleniumgridsetup
-    harness.io/cd-serviceId: CleanUpWakeUp
+    harness.io/ci-pipelineIds: Dochub_pr_env,Seleniumgridsetup
   tags:
     - java
     - data
