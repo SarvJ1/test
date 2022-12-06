@@ -1,0 +1,67 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    harness.io/project-url: https://app.harness.io/ng/#/account/vpCkHKsDSxK9_KYfjCTMKA/ci/orgs/QE_Team/projects/Quality_Assurence/deployments
+    harness.io/ci-pipelineIds: Publish_system_release_change_list_to_Medium,
+      Pre_QA_Jira_Status_Check, PreQASkipDeployment,
+      Publish_change_list_in_Medium, CDC_NG_API_SANITY, CDC_NG_CG_CleanUp,
+      CDC_PRE_QA, NGPipelinePRSanity, CI_Backend_Automation_Parallel,
+      PRE_QA_CDC_NG_TESTS, Update_Hotfix_label_and_version_for_NGUI
+  name: URL29
+  description: Artist Lookup
+  tags:
+    - java
+    - data
+  links:
+    - url: https://example.com/user
+      title: Examples Users
+      icon: user
+    - url: https://example.com/group
+      title: Example Group
+      icon: group
+    - url: https://example.com/cloud
+      title: Link with Cloud Icon
+      icon: cloud
+    - url: https://example.com/dashboard
+      title: Dashboard
+      icon: dashboard
+    - url: https://example.com/help
+      title: Support
+      icon: help
+    - url: https://example.com/web
+      title: Website
+      icon: web
+    - url: https://example.com/alert
+      title: Alerts
+      icon: alert
+  uid: 9f3cfaac-0407-4aab-b5af-348c29416623
+  etag: 998c911316484d1334f1b4dea8a177d298db9ddc
+relations:
+  - type: dependsOn
+    targetRef: resource:default/artists-db
+    target:
+      kind: resource
+      namespace: default
+      name: artists-db
+  - type: ownedBy
+    targetRef: group:default/team-a
+    target:
+      kind: group
+      namespace: default
+      name: team-a
+  - type: partOf
+    targetRef: system:default/artist-engagement-portal
+    target:
+      kind: system
+      namespace: default
+      name: artist-engagement-portal
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-a
+  system: artist-engagement-portal
+  dependsOn:
+    - resource:artists-db
+  apiConsumedBy:
+    - component:www-artist
